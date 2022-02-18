@@ -4,6 +4,7 @@ let activeSlideIdx = 0
 
 setInterval(() => {
     clear()
+
     if (activeSlideIdx < contents.length) {
         activeSlideIdx++
         if (activeSlideIdx === contents.length) {
