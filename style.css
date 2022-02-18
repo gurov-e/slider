@@ -20,14 +20,14 @@ html {
 
 body {
     height: 100vh; width: 100vw;
-
+    
+    overflow: hidden;
     background-color: rgb(15, 15, 15);
 }
 
 ul {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     flex-flow: row wrap;
 }
 
@@ -66,6 +66,7 @@ li {
     justify-content: center;
     z-index: 1;
     margin-top: -50px;
+    flex-wrap: wrap;
 }
 
 .series {
@@ -96,12 +97,29 @@ li {
 
 @media screen and (max-width: 768px) {
     .series {
-      width: 30px; height: 30px;
-      justify-content: space-between;
+      width: 20px; height: 20px;
       margin-top: -70px;
     }
 
     .series:not(:first-child) {
-        margin-left: 3vw;
+        margin-left: 2vw;
+    }
+
+    .active-btn {
+        width: 25px; height: 25px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .series {
+      width: 15px; height: 15px;
+    }
+
+    .series:not(:first-child) {
+        margin-left: 1.5vw;
+    }
+
+    .active-btn {
+        width: 20px; height: 20px;
     }
 }
