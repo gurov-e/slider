@@ -1,16 +1,16 @@
-﻿const contents = document.querySelectorAll('.content')
+﻿const slides = document.querySelectorAll('.slide')
 const listItems = document.querySelectorAll('.series')
 let activeSlideIdx = 0
 
 setInterval(() => {
     clear()
 
-    if (activeSlideIdx < contents.length) {
+    if (activeSlideIdx < slides.length) {
         activeSlideIdx++
-        if (activeSlideIdx === contents.length) {
+        if (activeSlideIdx === slides.length) {
             activeSlideIdx = 0
         }
-        contents[activeSlideIdx].classList.add('show')
+        slides[activeSlideIdx].classList.add('show')
         listItems[activeSlideIdx].classList.add('active-btn')
     }
 }, 5000)
@@ -20,13 +20,12 @@ listItems.forEach((item, idx) => {
         clear()
     
         item.classList.add('active-btn')
-        contents[idx].classList.add('show')
+        slides[idx].classList.add('show')
         activeSlideIdx = idx
     })
-    listItems[0].classList.add('active-btn')
 })
 
 function clear() {
-    contents.forEach(img => img.classList.remove('show'))
+    slides.forEach(img => img.classList.remove('show'))
     listItems.forEach(item => item.classList.remove('active-btn'))
 }

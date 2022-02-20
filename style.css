@@ -1,11 +1,7 @@
 :root {
-    --dark-grey: rgb(70, 70, 70);
+    --dark-grey: rgb(100, 100, 100);
     --grey: rgb(160, 160, 160);
     --light-gray: rgb(130, 130, 130);
-}
-
-::-webkit-scrollbar {
-    display: none;
 }
 
 * {
@@ -14,13 +10,12 @@
     box-sizing: border-box;
 }
 
-html {
+html, 
+body {
     width: 100vw; height: 100vh;
 }
 
 body {
-    height: 100vh; width: 100vw;
-    
     overflow: hidden;
     background-color: rgb(15, 15, 15);
 }
@@ -28,37 +23,42 @@ body {
 ul {
     display: flex;
     align-items: center;
-    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
 li {
     list-style: none;
 }
 
-.content.show {
+.slide.show {
     opacity: 1;
+    box-shadow: 0 0 100px #fff;
 }
 
-.contents {
+.slider-list {
     width: 100vw; height: 100vh;
 
     pointer-events: none;
     user-select: none;
 }
 
-.content {
+.slide {
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
     
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100vw; height: 100vh;
     margin: 0 auto;
+    transform: scale(0.85);
 
     object-fit: contain;
 
     transition: opacity ease-in-out .5s;
+    pointer-events: none;
 }
 
 .controls {
@@ -72,7 +72,7 @@ li {
 .series {
     position: relative;
     
-    width: 10px; height: 10px;
+    width: 15px; height: 15px;
 
     background: var(--dark-grey);
     border-radius: 50%;
@@ -89,16 +89,31 @@ li {
 }
 
 .active-btn {
-    width: 15px; height: 15px;
+    width: 20px; height: 20px;
 
     border-radius: 0;
     background: var(--light-gray);
 }
 
+@media screen and (min-width: 1921px) {
+    .series {
+        width: 30px; height: 30px;
+        margin-top: -90px;
+    }
+
+    .series:not(:first-child) {
+        margin-left: 2.5vw;
+    }
+
+    .active-btn {
+        width: 35px; height: 35px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .series {
-      width: 20px; height: 20px;
-      margin-top: -70px;
+      width: 15px; height: 15px;
+      margin-top: -100px;
     }
 
     .series:not(:first-child) {
@@ -106,13 +121,14 @@ li {
     }
 
     .active-btn {
-        width: 25px; height: 25px;
+        width: 20px; height: 20px;
     }
 }
 
 @media screen and (max-width: 420px) {
     .series {
       width: 15px; height: 15px;
+      margin-top: -120px;
     }
 
     .series:not(:first-child) {
@@ -121,5 +137,35 @@ li {
 
     .active-btn {
         width: 20px; height: 20px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .series {
+      width: 12px; height: 12px;
+      margin-top: -150px;
+    }
+
+    .series:not(:first-child) {
+        margin-left: 1.5vw;
+    }
+
+    .active-btn {
+        width: 18px; height: 18px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .series {
+      width: 10px; height: 10px;
+      margin-top: -200px;
+    }
+
+    .series:not(:first-child) {
+        margin-left: 2vw;
+    }
+
+    .active-btn {
+        width: 15px; height: 15px;
     }
 }
