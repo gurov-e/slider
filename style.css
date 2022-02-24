@@ -69,7 +69,7 @@ li {
     margin-top: -50px;
 }
 
-.series {
+.control {
     position: relative;
     width: 15px; height: 15px;
 
@@ -79,11 +79,11 @@ li {
     cursor: pointer;
 }
 
-.series:not(:first-child) {
+.control:not(:first-child) {
     margin-left: 1.8vw;
 }
 
-.series:hover {
+.control:hover {
     background: var(--grey);
 }
 
@@ -95,12 +95,12 @@ li {
 }
 
 @media screen and (min-width: 1921px) {
-    .series {
+    .control {
         width: 30px; height: 30px;
         margin-top: -90px;
     }
 
-    .series:not(:first-child) {
+    .control:not(:first-child) {
         margin-left: 2.5vw;
     }
 
@@ -110,12 +110,12 @@ li {
 }
 
 @media screen and (max-width: 768px) {
-    .series {
+    .control {
       width: 15px; height: 15px;
       margin-top: -100px;
     } 
 
-    .series:not(:first-child) {
+    .control:not(:first-child) {
         margin-left: 2vw;
     }
 
@@ -125,12 +125,12 @@ li {
 }
 
 @media screen and (max-width: 420px) {
-    .series {
+    .control {
       width: 15px; height: 15px;
       margin-top: -120px;
     }
 
-    .series:not(:first-child) {
+    .control:not(:first-child) {
         margin-left: 1.5vw;
     }
 
@@ -140,12 +140,12 @@ li {
 }
 
 @media screen and (max-width: 370px) {
-    .series {
+    .control {
       width: 12px; height: 12px;
       margin-top: -150px;
     }
 
-    .series:not(:first-child) {
+    .control:not(:first-child) {
         margin-left: 1.5vw;
     }
 
@@ -155,12 +155,12 @@ li {
 }
 
 @media screen and (max-width: 280px) {
-    .series {
+    .control {
       width: 10px; height: 10px;
       margin-top: -200px;
     }
 
-    .series:not(:first-child) {
+    .control:not(:first-child) {
         margin-left: 2vw;
     }
 
