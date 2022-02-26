@@ -77,6 +77,9 @@ li {
     border-radius: 50%;
 
     cursor: pointer;
+    transition: 
+        width ease-in-out .5s, 
+        height ease-in-out .5s;
 }
 
 .control:not(:first-child) {
@@ -94,7 +97,8 @@ li {
     background: var(--light-gray);
 }
 
-@media screen and (min-width: 1921px) {
+
+@media screen and (min-width: 2560px) {
     .control {
         width: 30px; height: 30px;
         margin-top: -90px;
@@ -139,7 +143,7 @@ li {
     }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 320px) {
     .control {
       width: 12px; height: 12px;
       margin-top: -150px;
