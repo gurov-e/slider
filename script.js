@@ -2,6 +2,11 @@
 const controls = document.querySelectorAll('.control')
 let activeSlideIdx = 0
 
+function clear() {
+    slides.forEach(img => img.classList.remove('show'))
+    controls.forEach(item => item.classList.remove('active-btn'))
+}
+
 setInterval(() => {
     clear()
 
@@ -24,8 +29,3 @@ controls.forEach((item, idx) => {
         activeSlideIdx = idx
     })
 })
-
-function clear() {
-    slides.forEach(img => img.classList.remove('show'))
-    controls.forEach(item => item.classList.remove('active-btn'))
-}
