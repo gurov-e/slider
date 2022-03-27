@@ -70,8 +70,7 @@ li {
 
 .control {
   position: relative;
-  width: 15px;
-  height: 15px;
+  width: 15px; height: 15px;
 
   background: var(--dark-grey);
   border-radius: 50%;
