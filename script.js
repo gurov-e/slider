@@ -31,7 +31,7 @@ controls.forEach((item, idx) => {
 
 })
 
-window.addEventListener('keydown', (e) => {
+window.addEventListener('keyup', (e) => {
   if (e.code === 'ArrowRight' || e.code === 'ArrowLeft') {
     clear()
 
