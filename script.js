@@ -28,7 +28,6 @@ controls.forEach((item, idx) => {
     slides[idx].classList.add('show')
     activeSlideIdx = idx
   })
-
 })
 
 window.addEventListener('keyup', (e) => {
