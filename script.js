@@ -2,11 +2,13 @@
 const controls = document.querySelectorAll('.control')
 let activeSlideIdx = 0
 
+// remove active classes
 function clear() {
   slides.forEach(img => img.classList.remove('show'))
   controls.forEach(item => item.classList.remove('active-btn'))
 }
 
+// auto switch slides
 setInterval(() => {
   clear()
 
@@ -20,6 +22,7 @@ setInterval(() => {
   }
 }, 5000)
 
+// add active classes
 controls.forEach((item, idx) => {
   item.addEventListener('click', () => {
     clear()
@@ -30,6 +33,7 @@ controls.forEach((item, idx) => {
   })
 })
 
+// switching slides with arrows
 window.addEventListener('keyup', (e) => {
   if (e.code === 'ArrowRight' || e.code === 'ArrowLeft') {
     clear()
